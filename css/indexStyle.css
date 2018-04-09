@@ -5,6 +5,16 @@ body
   color: #fff;
 }
 
+h2
+{
+  font-size: 30px;
+}
+
+#detailsBody
+{
+  height: 100vh;
+}
+
 .Nav
 {
   list-style: none;
@@ -78,4 +88,10 @@ input
 img
 {
   width: 300px;
+}
+
+.display
+{
+  display: inline-block;
+  width: 400px;
 }

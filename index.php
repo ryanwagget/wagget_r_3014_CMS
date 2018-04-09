@@ -31,11 +31,12 @@
 
 	if(!is_string($getMovies)){
 		while($row = mysqli_fetch_array($getMovies))
-			echo "<img src=\"images/{$row['movies_cover']}\" alt=\"{row['movies_title']}\">
+			echo "<div class=\"display\">
+			<img src=\"images/{$row['movies_cover']}\" alt=\"{row['movies_title']}\">
 			<h2>{$row['movies_title']}</h2>
 			<p>{$row['movies_storyline']}</p>
 			<a href=\"details.php?id={$row['movies_id']}\">More</a><br></br>
-		";
+		</div>";
 	}else{
 		echo "<p class=\"error\">{$getMovies}</p>";
 	}

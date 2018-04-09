@@ -7,7 +7,7 @@
 		$password = mysqli_real_escape_string($link, $password);
 		$loginstring = "SELECT * FROM tbl_user WHERE user_name='{$username}' AND user_pass='{$password}'";
 		$user_set = mysqli_query($link, $loginstring);
-		//echo mysqli_num_rows($user_set);
+
 		if(mysqli_num_rows($user_set))
 		{
 			$founduser = mysqli_fetch_array($user_set, MYSQLI_ASSOC);

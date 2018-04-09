@@ -16,7 +16,6 @@ $num = count($_POST);
 
 $qstring = "UPDATE {$tbl} SET ";
 
-//$qstring .= "WHERE {$col}={$id}";
 
 foreach($_POST as $key => $value){
   $count++;
@@ -36,8 +35,7 @@ if($updatequery){
 }else{
   echo "Content change failed. Please try again.";
 }
-//echo $qstring;
-//echo count($_POST);
+
 
 mysqli_close($link);
  ?>

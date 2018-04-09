@@ -9,14 +9,10 @@
     echo "<input hidden name=\"col\" value=\"{$col}\">";
     echo "<input hidden name=\"id\" value=\"{$id}\">";
 
-    //echo mysqli_num_fields($result);
     for($i=0; $i<mysqli_num_fields($result); $i++) {
       $dataType = mysqli_fetch_field_direct($result, $i);
       $fieldName = $dataType->name;
       $fieldType = $dataType->type;
-
-    //  echo $fieldName. "<br>";
-    //  echo $fieldType. "<br><br>";
 
       if($fieldName != $col){
         echo "<label>{$fieldName}</label><br>";

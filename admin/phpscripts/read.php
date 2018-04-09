@@ -1,5 +1,5 @@
 <?php
-	
+
 	function getAll($tbl)
 	{
 		include('connect.php');
@@ -47,7 +47,6 @@
 		}else{
 			$error = "There was a problem accessing";
 		}
-		//echo $filterQuery;
 		mysqli_close($link);
 	}
 

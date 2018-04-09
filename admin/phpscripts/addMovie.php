@@ -4,10 +4,9 @@
 	{
 		include('connect.php');
 		if($cover['type'] == "image/jpg" || $cover['type'] == "image/jpeg"){
-		$targetpath = "../images/{$cover['name']}"; //where we want it to go
+		$targetpath = "../images/{$cover['name']}";
 
 		if(move_uploaded_file($cover['tmp_name'], $targetpath)){
-			//echo "worked";
 			$th_copy = "../images/TH_{$cover['name']}";
 			if(!copy($targetpath, $th_copy)){
 					$message = "Movie was not added";
@@ -25,10 +24,7 @@
 				$result3 = mysqli_query($link, $qstring3);
 		}
 		redirecet_to("admin_index.php");
-		//$size = getimagesize($targetpath);
-		//echo $size[3];
 	}else{
-		//echo "nrejn";
 	}
 	}
 }

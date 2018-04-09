@@ -13,8 +13,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Details</title>
+<link rel="stylesheet" href="css/indexStyle.css">
 </head>
-<body>	
+<body id="detailsBody">
 <?php
 	if(!is_string($getMovie)){
 		$row=mysqli_fetch_array($getMovie);
