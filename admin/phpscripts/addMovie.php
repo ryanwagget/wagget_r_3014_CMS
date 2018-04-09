@@ -1,6 +1,6 @@
 <?php
 
-	function addMovie($cover, $title, $year, $runtime, $story, $trailer, $release, $genre)
+	function addMovie($cover, $title, $year, $runtime, $story, $genre)
 	{
 		include('connect.php');
 		if($cover['type'] == "image/jpg" || $cover['type'] == "image/jpeg"){
@@ -10,10 +10,10 @@
 			//echo "worked";
 			$th_copy = "../images/TH_{$cover['name']}";
 			if(!copy($targetpath, $th_copy)){
-					$message = "Didn't work.";
+					$message = "Movie was not added";
 					return $message;
 			}
-			$qstring = "INSERT INTO tbl_movies VALUES(NULL, '{$cover['name']}', '{$title}', '{$year}', '{$runtime}', '{$story}', '{$trailer}', '{$release}')";
+			$qstring = "INSERT INTO tbl_movies VALUES(NULL, '{$cover['name']}', '{$title}', '{$year}', '{$runtime}', '{$story}')";
 			$result = mysqli_query($link, $qstring);
 			if($result){
 				$qstring2 = "SELECT * FROM tbl_movies ORDER BY movies_id DESC LIMIT 1";

@@ -11,10 +11,8 @@
 		$year = trim($_POST['year']);
 		$runtime = trim($_POST['runtime']);
 		$story = trim($_POST['story']);
-		$trailer = trim($_POST['trailer']);
-		$release = trim($_POST['release']);
 		$genre = $_POST['genList'];
-		$result = addMovie($cover, $title, $year, $runtime, $story, $trailer, $release, $genre);
+		$result = addMovie($cover, $title, $year, $runtime, $story, $genre);
 		$message = $result;
 
 		//echo $cover['type'];
